@@ -36,3 +36,44 @@
     transform: rotate(360deg);
   }
 }
+
+h5 {
+  margin-left: 10px;
+}
+
+button {
+  margin-left: 20px;
+  display: flex;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-evenly;
+}
+.segment {
+  margin-top: 20px;
+  display: flex;
+  background-color: skyblue;
+  border-radius: 5px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 40%;
+  height: 150px;
+}
+.segment img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+}
+.junk {
+  font-size: bold;
+  font-size: 25px;
+}
+.spinner {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}

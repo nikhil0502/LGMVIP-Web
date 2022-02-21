@@ -163,21 +163,21 @@ export const Forms = () => {
             <input
               type="checkbox"
               value="JAVA"
-              name={userRegistration.skills}
+              name="skills"
               onChange={input}
             />{" "}
             Java <br />
             <input
               type="checkbox"
               value="HTML"
-              name={userRegistration.skills}
+              name="skills"
               onChange={input}
             />{" "}
             HTML <br />
             <input
               type="checkbox"
               value="CSS"
-              name={userRegistration.skills}
+              name="skills"
               onChange={input}
             />{" "}
             CSS

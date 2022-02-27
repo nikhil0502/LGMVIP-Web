@@ -6,3 +6,56 @@
     margin-left: 600px;
   }
 }
+
+.heading {
+  text-align: center;
+  align-items: center;
+  color: skyblue;
+  text-decoration: underline;
+}
+
+/* 
+
+form {
+  max-width: 700px;
+}
+input {
+  margin-left: 30px;
+}
+label {
+  margin-left: 50px;
+}
+
+button {
+  padding: 20px;
+  margin-left: 50px;
+} */
+
+.display {
+  margin-left: 20px;
+  background: linear-gradient(0.25turn, #3f87a6da, rgba(0, 255, 255, 0.795));
+  border-radius: 10px;
+  padding: 20px 50px;
+}
+
+.myimage {
+  margin-left: 20px;
+}
+
+.display p,
+a {
+  margin-left: 20px;
+}
+
+.display a {
+  color: black;
+  margin-left: 10px;
+}
+
+span {
+  text-decoration: underline;
+}
+
+.main-display {
+  display: inline-block;
+}

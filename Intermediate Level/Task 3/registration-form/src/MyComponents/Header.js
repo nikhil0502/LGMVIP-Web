@@ -10,7 +10,7 @@ export default function Header() {
             src="https://letsgrowmore.in/wp-content/uploads/2021/05/undraw_solution_mindset_34bi-min.png"
             alt="logo"
             width="80"
-            height="80"
+            height="70"
             className="img"
           />
         </a>

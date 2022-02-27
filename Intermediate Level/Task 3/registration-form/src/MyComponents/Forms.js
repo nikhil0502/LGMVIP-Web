@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./style1.css";
 
 export const Forms = () => {
   const [userRegistration, setUserRegistration] = useState({
@@ -6,8 +7,8 @@ export const Forms = () => {
     email: "",
     website: "",
     image: "",
-    skills: false,
     gender: "other",
+    skills: "",
   });
 
   const [records, setRecords] = useState([]);
@@ -47,8 +48,8 @@ export const Forms = () => {
         email: "",
         website: "",
         image: "",
-        skills: false,
         gender: "other",
+        skills: "",
       });
     }
   };
@@ -61,14 +62,17 @@ export const Forms = () => {
       email: "",
       website: "",
       image: "",
-      skills: false,
       gender: "other",
+      skills: "",
     });
   };
 
   return (
     <>
-      <div className="container my-5">
+      <div className="container mycontainer my-5">
+        <div className="heading">
+          <h2>Student Entrollment Form</h2>
+        </div>
         <form>
           <div className="mb-3">
             <label htmlFor="name" className="form-label">
@@ -78,6 +82,7 @@ export const Forms = () => {
               type="text"
               className="form-control"
               value={userRegistration.username}
+              autoComplete="off"
               onChange={input}
               id="name"
               aria-describedby="emailHelp"
@@ -94,6 +99,7 @@ export const Forms = () => {
               value={userRegistration.email}
               onChange={input}
               id="email"
+              autoComplete="off"
               name="email"
             />
           </div>
@@ -109,6 +115,7 @@ export const Forms = () => {
               id="website"
               aria-describedby="emailHelp"
               name="website"
+              autoComplete="off"
             />
           </div>
           <div className="mb-3">
@@ -123,6 +130,7 @@ export const Forms = () => {
               id="image"
               aria-describedby="emailHelp"
               name="image"
+              autoComplete="off"
             />
           </div>
           <div className="mb-3">
@@ -158,29 +166,17 @@ export const Forms = () => {
           <div className="mb-3">
             <label htmlFor="skills" className="form-label">
               Skills:
-            </label>{" "}
-            <br />
+            </label>
             <input
-              type="checkbox"
-              value="JAVA"
-              name="skills"
+              type="text"
+              className="form-control"
+              value={userRegistration.skills}
               onChange={input}
-            />{" "}
-            Java <br />
-            <input
-              type="checkbox"
-              value="HTML"
+              id="skills"
+              aria-describedby="emailHelp"
               name="skills"
-              onChange={input}
-            />{" "}
-            HTML <br />
-            <input
-              type="checkbox"
-              value="CSS"
-              name="skills"
-              onChange={input}
-            />{" "}
-            CSS
+              autoComplete="off"
+            />
           </div>
           <button
             type="submit"
@@ -198,22 +194,45 @@ export const Forms = () => {
           </button>
         </form>
       </div>
-      <div className="container">
+      <div className="my-container">
         {records.map((cur) => {
           return (
-            <div className="" key={cur.id}>
-              <p>{cur.username}</p>
-              <p>{cur.gender}</p>
-              <p>{cur.email}</p>
-              <a href={cur.website} target="_blank">
-                {cur.website}
-              </a>
-
-              <p>{cur.skills},</p>
-              <div>
-                <img src={cur.image} alt="" width="100px" height="100px" />
+            <div className="main-display">
+              <div className="display" key={cur.id}>
+                <p>
+                  {" "}
+                  <span>Name:</span> {cur.username}
+                </p>
+                <p>
+                  <span>Gender:</span> {cur.gender}
+                </p>
+                <p>
+                  {" "}
+                  <span>Email:</span> {cur.email}
+                </p>
+                <p>
+                  {" "}
+                  <span>Website:</span>
+                  <a href={cur.website} target="_blank">
+                    {cur.website}
+                  </a>
+                </p>
+                <p className="height">
+                  {" "}
+                  <span>Skills:</span> {cur.skills}
+                </p>
+                <p>
+                  <img
+                    src={cur.image}
+                    alt=""
+                    width="100px"
+                    height="100px"
+                    className="myimage"
+                  />
+                </p>
               </div>
-              <hr />
+              <br />
+              <br />
             </div>
           );
         })}
